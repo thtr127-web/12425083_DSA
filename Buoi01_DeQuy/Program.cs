@@ -54,6 +54,36 @@ namespace Buoi01_DeQuy
             Console.WriteLine("Bài 8: Tổng căn bậc hai lồng nhau");
             Console.WriteLine($"Với n = 4 => S(4) = {Bai3_8(1, 4):F4}\n");
 
+            Console.WriteLine("\n------------------------------------------------------");
+            Console.WriteLine("PHẦN 4: BÀI TẬP TỰ THỰC HÀNH ĐỆ QUY");
+            Console.WriteLine("Bài 1: Tính tổng S(n) = 1 + 2 + ... +n ");
+            Console.WriteLine($"Với n = 6 => S(6) = {Bai3_1(6)}\n");
+
+            Console.WriteLine("Bài 2: Đảo ngược chuỗi kí tự");
+            string chuoiGoc = "hello";
+            Console.WriteLine($"Chuỗi gốc: \"{chuoiGoc}\" => Đảo ngược: \"{Bai4_2(chuoiGoc)}\"\n");
+
+            Console.WriteLine("Bài 3: Tính lũy thừa x^n");
+            Console.WriteLine($"Với x=3, n=4 => 3^4 = {Bai3_4(3,4)}\n");
+
+            Console.WriteLine("Bài 4: Tìm số lướn nhất trong mảng");
+            int[] mangSo = { 12, 45, 7, 89, 23, 56 };
+            Console.WriteLine($"Mảng: [{string.Join(",", mangSo)}] => Max = {Bai4_4(mangSo, mangSo.Length)}\n");
+
+            Console.WriteLine("Bài 5: Tính số chữ số của số nguyên dương n");
+            int soCanDem = 98765;
+            Console.WriteLine($"Số chữ số của {soCanDem} là: {Bai3_7(soCanDem)}");
+
+            Console.WriteLine("Bài 6: giải bài toán Tháp Hà Nội (n=3 đĩa)");
+            Bai4_6(3, 'A', 'C', 'B');
+            Console.WriteLine();
+
+            Console.WriteLine("Bài 7: Liệt kê các dãy nhị phân độ dài n = 3");
+            int nNhiPhan = 3;
+            int[] a = new int[nNhiPhan];
+            Bai4_7(0, nNhiPhan, a);
+            Console.WriteLine();
+
             Console.ReadLine();
         }
 
@@ -295,6 +325,54 @@ namespace Buoi01_DeQuy
         {
             if (i == n) return Math.Sqrt(n);
             return Math.Sqrt(i + Bai3_8(i + 1, n));
+        }
+
+
+        static string Bai4_2(string s)
+        {
+            if (s.Length <=1)
+                return s;
+            return Bai4_2(s.Substring(1)) + s[0];
+        }
+
+        static int Bai4_4(int[] arr, int n)
+        {
+            if (n==1)
+                return arr[0];
+            int maxConLai = Bai4_4(arr, n - 1);
+            if (arr[n - 1] > maxConLai)
+                return arr[n - 1];
+            return maxConLai;
+        }
+
+        static void Bai4_6(int n, char cocNguon, char cocDich, char cocTrungGian)
+        {
+            if (n==1)
+            { 
+                Console.WriteLine($"Chuyển 1 đĩa từ {cocNguon} -> {cocDich}");
+                return;
+            }
+            Bai4_6(n - 1, cocNguon, cocTrungGian, cocDich);
+            Console.WriteLine($"Chuyển 1 đĩa từ {cocNguon} -> {cocDich}");
+            Bai4_6(n - 1, cocTrungGian, cocDich, cocNguon);
+        }
+
+        static void Bai4_7(int i, int n, int[] a)
+        {
+            if (i==n)
+            {
+                for (int j = 0;j<n; j++)
+                {
+                    Console.Write(a[j]);
+                }
+                Console.Write(" ");
+                return;
+            }
+            a[i] = 0;
+            Bai4_7(i + 1, n, a);
+
+            a[i] = 1;
+            Bai4_7(i + 1, n, a);
         }
     }
 }   

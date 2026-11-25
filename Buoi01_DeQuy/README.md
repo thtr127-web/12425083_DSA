@@ -5,6 +5,7 @@ Họ tên: Bùi Thị Thùy Trang - MSV: 12425083
 - **chương 1: Tổng quan về cấu trúc dữ liệu và giải thuật:** Bài 1, 2, 3, 4, 5
 - **Chương 2: Phân tích giải thuật:** Bài 1, 2, 3, 4, 5, 6
 - **Chương 3 Đệ quy:** Bài 1, 2, 3, 4, 5, 6, 7, 8
+- **Phần 4: Bài tập tự luyện đệ quy:** Bài Bài 1, 2, 3, 4, 5, 6, 7,
 
 --
 ## Phần lý thuyết Chương 2: Phân tích giải thuật
@@ -38,7 +39,7 @@ dotnet run --project Buoi01_DeQuy.
 ## Kết quả chạy
 CHƯƠNG 1: TỔNG QUAN VỀ CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT
 Bài 1: Tìm Min, Max trong 1000 số ngẫu nhiên
-Số lớn nhất: 9999 | Số nhỏ nhất: 18
+Số lớn nhất: 9995 | Số nhỏ nhất: 22
 
 Bài 2: FizzBuzz từ 1 đến 100
 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
@@ -47,8 +48,8 @@ Bài 3: Đảo ngược chuỗi
 Chuỗi gốc: "Cấu trúc dữ liệu và giải thuật" => Đảo ngược: "tậuht iảig àv uệil ữd cúrt uấC"
 
 Bài 4: Mảng 1000 số ngẫu nhiên & Sắp xếp tăng
-15 phần tử đầu trước khi sắp xếp: 1196 282 2624 133 555 814 6886 7003 282 822 6716 6295 7889 2619 3445
-15 phần tử đầu sau khi sắp xếp tăng: 4 7 9 42 77 110 133 143 147 162 169 200 211 211 214
+15 phần tử đầu trước khi sắp xếp: 1691 3915 1218 1701 7340 1765 1705 7081 9317 5192 4194 1015 5487 2736 683
+15 phần tử đầu sau khi sắp xếp tăng: 22 30 43 53 61 62 63 70 85 107 111 115 121 122 134
 
 Bài 5: Số Fibonacci thứ 10
 F(10) = 55
@@ -56,20 +57,20 @@ F(10) = 55
 ------------------------------------------------------
 CHƯƠNG 2: PHÂN TÍCH GIẢI THUẬT
 Bài 3: Kiểm tra số nguyên tố (n = 1000003)
-- Giải thuật 1 (Duyệt đến n-1): Kết quả = True | Thời gian = 6.9735 ms
-- Giải thuật 2 (Duyệt đến căn n): Kết quả = True | Thời gian = 0.0177 ms
+- Giải thuật 1 (Duyệt đến n-1): Kết quả = True | Thời gian = 6.2405 ms
+- Giải thuật 2 (Duyệt đến căn n): Kết quả = True | Thời gian = 0.0142 ms
 
 Bài 4: Liệt kê số hoàn hảo nhỏ hơn 10000
-- Giải thuật 1 (Cơ bản - O(N^2)): 6 28 496 8128 | Thời gian = 357.1992 ms
-- Giải thuật 2 (Cải tiến căn bậc 2 - O(N*sqrt(N))): 6 28 496 8128 | Thời gian = 13.7243 ms
+- Giải thuật 1 (Cơ bản - O(N^2)): 6 28 496 8128 | Thời gian = 315.4754 ms
+- Giải thuật 2 (Cải tiến căn bậc 2 - O(N*sqrt(N))): 6 28 496 8128 | Thời gian = 12.9278 ms
 
 Bài 5: So sánh tính Fibonacci thứ 35 ===
-- Giải thuật 1 (Đệ quy trực tiếp O(2^n)): F(35) = 9227465 | Thời gian = 877.5324 ms
-- Giải thuật 2 (Vòng lặp O(n)): F(35) = 9227465 | Thời gian = 0.7093 ms
+- Giải thuật 1 (Đệ quy trực tiếp O(2^n)): F(35) = 9227465 | Thời gian = 888.8768 ms
+- Giải thuật 2 (Vòng lặp O(n)): F(35) = 9227465 | Thời gian = 0.5778 ms
 
 Bài 6: So sánh 2 giải thuật sắp xếp (n = 5000 phần tử) ===
-- Giải thuật 1 (Bubble Sort - O(n^2)): Thời gian = 211.0513 ms
-- Giải thuật 2 (Selection Sort - O(n^2)): Thời gian = 971.2869 ms
+- Giải thuật 1 (Bubble Sort - O(n^2)): Thời gian = 384.4578 ms
+- Giải thuật 2 (Selection Sort - O(n^2)): Thời gian = 212.0240 ms
 
 ------------------------------------------------------
 CHƯƠNG 3: ĐỆ QUY
@@ -97,3 +98,32 @@ Số chữ số của 123456 là: 6
 
 Bài 8: Tổng căn bậc hai lồng nhau
 Với n = 4 => S(4) = 1.7488
+
+
+------------------------------------------------------
+PHẦN 4: BÀI TẬP TỰ THỰC HÀNH ĐỆ QUY
+Bài 1: Tính tổng S(n) = 1 + 2 + ... +n
+Với n = 6 => S(6) = 21
+
+Bài 2: Đảo ngược chuỗi kí tự
+Chuỗi gốc: "hello" => Đảo ngược: "olleh"
+
+Bài 3: Tính lũy thừa x^n
+Với x=3, n=4 => 3^4 = 81
+
+Bài 4: Tìm số lướn nhất trong mảng
+Mảng: [12,45,7,89,23,56] => Max = 89
+
+Bài 5: Tính số chữ số của số nguyên dương n
+Số chữ số của 98765 là: 5
+Bài 6: giải bài toán Tháp Hà Nội (n=3 đĩa)
+Chuyển 1 đĩa từ A -> C
+Chuyển 1 đĩa từ A -> B
+Chuyển 1 đĩa từ C -> B
+Chuyển 1 đĩa từ A -> C
+Chuyển 1 đĩa từ B -> A
+Chuyển 1 đĩa từ B -> C
+Chuyển 1 đĩa từ A -> C
+
+Bài 7: Liệt kê các dãy nhị phân độ dài n = 3
+000 001 010 011 100 101 110 111
